@@ -1,97 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cicly - Login</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cicly - Login</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header>
-<h1>cicly♥</h1>
-<nav>
-<a>Início</a>
-<a>Produtos</a>
-<a>Categorias</a>
-<a>Sobre nós</a>
-<a>Contato</a>
-</nav>
-</header>
+  <header>
+    <h1>cicly♥</h1>
+    <nav>
+      <a href="home.html">Início</a>
+      <a href="home.html#produtos">Produtos</a>
+      <a href="home.html#categorias">Categorias</a>
+      <a href="home.html#sobre">Sobre nós</a>
+      <a href="home.html#contato">Contato</a>
+    </nav>
+  </header>
 
+  <main>
+    <div class="marca">
+      <h2>cicly♥</h2>
+      <p>cuidado em todos<br>os momentos</p>
+    </div>
 
-<main>
+    <div class="card">
+      <h3>Entrar na sua conta</h3>
+      <p>Acesse seus pedidos, favoritos e muito mais.</p>
 
-<div class="marca">
-<h2>cicly♥</h2>
-<p>cuidado em todos<br>os momentos</p>
-</div>
+      <form onsubmit="event.preventDefault(); fazerLogin();">
+        <input type="text" placeholder="E-mail ou CPF" required>
+        <input type="password" placeholder="Senha" required>
 
+        <div class="check">
+          <label>
+            <input type="checkbox"> Lembrar de mim
+          </label>
+          <a href="#">Esqueceu sua senha?</a>
+        </div>
 
-<div class="card">
+        <button type="submit">Entrar →</button>
+      </form>
 
-<h3>Entrar na sua conta</h3>
+      <hr>
 
-<p>Acesse seus pedidos, favoritos e muito mais.</p>
+      <button type="button" class="google">Entrar com Google</button>
 
-<input type="text" placeholder="E-mail ou CPF">
+      <p class="cadastro">
+        Ainda não tem uma conta? <a href="cadastro.html">Cadastre-se</a>
+      </p>
+    </div>
+  </main>
 
-<input type="password" placeholder="Senha">
+  <footer>
+    <div>🚚 Frete rápido<br>e seguro</div>
+    <div>🛡 Compra segura<br>e protegida</div>
+    <div>♡ Atendimento humanizado</div>
+  </footer>
 
-
-<div class="check">
-<label>
-<input type="checkbox">
-Lembrar de mim
-</label>
-
-<a>Esqueceu sua senha?</a>
-</div>
-
-
-<button>
-Entrar →
-</button>
-
-
-<hr>
-
-
-<button class="google">
- Entrar com Google
-</button>
-
-
-<p class="cadastro">
-Ainda não tem uma conta?
-<a href="cadastro.html">Cadastre-se</a>
-</p>
-
-
-</div>
-
-</main>
-
-
-<footer>
-
-<div>
-🚚 Frete rápido<br>
-e seguro
-</div>
-
-<div>
-🛡 Compra segura<br>
-e protegida
-</div>
-
-<div>
-♡ Atendimento humanizado
-</div>
-
-</footer>
-
-
+  <script>
+    function fazerLogin() {
+      alert("Login efetuado com sucesso!");
+      window.location.href = "home.html"; // Redireciona para a loja
+    }
+  </script>
 </body>
 </html>
